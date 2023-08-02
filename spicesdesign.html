@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <!-- font awsome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>SPICES Landing page</title>
+</head>
+    <style>
+           *{
+             margin: 0;
+             padding: 0;
+
+           }
+           html{
+             scroll-behavior: smooth;
+           }
+           body{
+             font-family:'Poppins', sans-serif;
+             overflow-x: hidden;
+           }
+           /* hero section */
+           #hero{
+              position: relative;
+              width: 100vw;
+              height: 100vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+           }
+           #hero::before{
+              position: absolute;
+              content: '';
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-image:url(./images/backimg.avif) ;
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              filter: brightness(50%);
+           }
+           #hero_content{
+              position: absolute;
+           }
+           #hero_content h1{
+             color: #fff;
+             font-size: 2.8rem;
+             text-shadow: 2px 2px #000;
+           }
+           #hero_content h2{
+             color: #fff;
+             font-size: 2rem;
+             font-family: cursive;
+             margin-top: 1rem;
+             margin-bottom: 4rem;
+             text-shadow: 2px 2px #000;
+           }
+           #hero_content a{
+             color: #fff;
+             padding: 3px 20px 3px 20px;
+             border: 1px solid orange;
+             background: rgb(0, 0, 0, 0.6);
+             font-size: 1.5rem;
+             text-decoration: none;
+             border-radius: 25px;
+           }
+           #hero_content a:hover{
+            background: navy;
+           }
+           /* haeder section starts */
+          #header{
+              position: fixed;
+              top: 0;
+              width: 100vw;
+              height: 70px;
+              line-height: 70px;
+          }
+          #navbar{
+            display: flex;
+            justify-content:space-around;
+            background: rgb(0, 0, 0, 0.5);
+          }
+          #navbar h1{
+            color: orange;
+            font-size: 1.8rem;
+            text-shadow: 2px 2px 2px #000;
+            font-family: cursive;
+          }
+          #navbar ul{
+            display: flex;
+          }
+          #navbar ul li:hover,#phone a:hover,#mobile_menu ul li:hover{
+            background: navy;
+            cursor: pointer;
+          }
+          #navbar ul li{
+            list-style: none;
+            padding: 3px 15px 3px 15px;
+          }
+          #navbar ul li a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1rem;
+          }
+          #phone a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1rem;
+            padding: 3px 15px 3px 15px;
+            border: 1px solid orange;
+            border-radius: 25px;
+          }
+          /* menu section css */
+          #menu{
+             padding:25px 0px 25px 0px;
+          }
+          #section{
+            padding:25px 0px 25px 0px;
+            text-align: center;
+            font-size: 2rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+          }
+          #menu_row{
+            display: flex;
+            padding: 0 100px 0 100px;
+          }
+          #menu_col{
+            box-shadow: 2px 2px 2px #bbb;
+            border: 1px solid #bbb;
+            background-color: #fff;
+            margin: 5px;
+            padding: 10px;
+            flex: 1;
+          }
+        #menu_col{
+            color:#fff;
+            text-align: center;
+            padding: 5px;
+            font-family: cursive;
+        }
+        #menu_col h2{
+          background-color: #000;
+        }
+        #image img{
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        .box{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           text-align: center;
+           margin: 5px;
+        }
+        /* chef section */
+        #chef{
+          padding: 25px 0 25px 0;
+        }
+        #chef_row{
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+        .chef_col{
+          text-align: center;
+          padding: 10;
+          margin: 5px;
+        }
+        #img{
+          width: 200px;
+          height: 250px;
+          margin: auto;
+        }
+        #img img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        /* about css */
+      #about{
+         padding: 25px 0 25px 0 ;
+      }
+      #about_row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 100px 0 100px;
+      }
+      .about_col{
+        flex: 1;
+      }
+      #about_img{
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+        margin: auto;
+      }
+      #about_img img{
+        border-radius: 40%;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+      .about_col h1{
+         text-align: center;
+         font-family: cursive;
+      }
+      .about_col p{
+         text-align:justify;
+         font-family:bold;
+      }
+      /* css for contact */
+      #contact{
+        padding: 25px 0 25px 0;
+      }
+      #contact_row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 100px 0 100px;
+        flex-wrap: wrap;
+      }
+      .contact_col{
+        flex: 1;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+      .contact_col p,h3{
+        font-weight: bold;
+        color: #000;
+        margin: 10px;
+
+      }
+      .contact_col p a{
+        text-decoration: none;
+        color: #000;
+
+      }
+      #social a{
+        color: blue;
+        margin: 3px;
+
+      }
+      .contact_col form{
+        display: flex;
+        flex-direction: column;
+        background-color:black;
+        width: 70%;
+        padding: 20px 40px 20px 20px;
+
+      }
+      .contact_col form h2{
+        text-align: center;
+        font-family: cursive;
+      }
+      .contact_col form input{
+        width: 100%;
+        height: 17pt;
+        padding: 5px;
+        margin: 5px;
+        
+      }
+      .contact_col form textarea{
+        width: 100%;
+        padding: 5px;
+        margin: 5px;
+      }
+      .contact_col form button{
+        margin:auto;
+        padding: 10px;
+        color: #fff;
+        background-color: #000;
+        border: 1px solid whitesmoke;
+        cursor: pointer;
+      }
+      /* footer css */
+      
+      #footer{
+         background-color: #292929;
+         padding: 20px;
+         position: relative;
+        }
+        #footer h5{
+          text-align: center;
+          color: rebeccapurple;
+        }
+        #footer h5 a{
+          color: #fff;
+          text-decoration: none;
+        }
+        #top{
+          position: absolute;
+          bottom: 12px;
+          right: 12px;
+        }
+        #top a{
+          color: #fff;
+          font-size: 1.2rem;
+        }
+
+
+
+/* responsive for mobile */
+          #mobile_menu{
+             display: none;
+             height: 40px;
+             line-height: 40px;
+             background-color: magenta;
+          }
+          #mobile_menu ul{
+             display: flex;
+             justify-content: center;
+          }
+          #mobile_menu ul li{
+            list-style: none;
+            padding: 0 5px 0 5px;
+          }
+          #mobile_menu ul li a{
+             text-decoration: none;
+             color: #fff;
+          }
+
+
+          @media screen and (max-width : 768px){
+            #header{
+              position: absolute;
+            }
+
+              #mobile_menu{
+                 display: block;
+              }
+              #navbar ul{
+                  display: none;
+              }
+              html{
+                font-size: 95%;
+              }
+              #menu_row,#about_row,#contact_row{
+                flex-wrap: wrap;
+                padding: 0 10px 0 10px;
+              }
+
+          }
+          @media screen and (max-width :360px){
+              html{
+                font-size: 70%;
+              }
+            #about_img{
+               width: 220px;
+               height: 220px;
+            }
+          }
+
+    </style>
+
+<body>
+    <!-- hero section begin -->
+          <div id="hero">
+              <div id="hero_content">
+                <h1>Dhrishti Spice Factory</h1>
+                <h2>Best Quality And Tasty Food</h2>
+                <a href="#menu">Menu</a>
+              </div>
+  
+          </div>
+    <!-- hero section begin -->
+
+    <!-- Header section -->
+               <div id="header">
+                     <nav id="navbar">
+                      <h1>Dhrishti Spice Palace</h1>
+                        <ul>
+                          <li><a href="./spicesdesign.html">Home</a></li>
+                          <li><a href="#menu">Menu</a></li>
+                          <li><a href="#chef">Chef</a></li>
+                          <li><a href="#about">About</a></li>
+                          <li><a href="#contact">Contact</a></li>
+                        </ul>
+                         <div id="phone">
+                           <i class="fa fa-phone-square" aria-hidden="true"></i>
+                            <a href="tel:+5487643549896">+5487643549896</a>
+                         </div>
+                     </nav>
+                      <!-- mobile responsive -->
+                        <div id="mobile_menu">
+                             <ul>
+                              <li><a href="./spicesdesign.html">Home</a></li>
+                              <li><a href="#menu">Menu</a></li>
+                              <li><a href="#shop">Shop</a></li>
+                              <li><a href="#about">About</a></li>
+                              <li><a href="#contact">Contact</a></li>
+                             </ul>
+                        </div>
+               </div>
+    <!-- Header section -->
+
+    <!-- ----Menu section----- -->
+        <div id="menu">
+           <h1 id="section">Menu</h1>
+           <div id="menu_row">
+             <div id="menu_col">
+                <h2>Masala</h2>
+                  <div class="box">
+                     <div id="image">
+                        <img src="./spiceimg/cinamanon.avif" alt="cinamon">
+                     </div>
+                       <div>
+                         <h3>Tasty Dishes</h3>
+                         <h4>Rs.100</h4>
+                       </div>
+                  </div>
+                  <div class="box">
+                     <div id="image">
+                        <img src="./spiceimg/funnel seed.avif" alt="cinamon">
+                     </div>
+                       <div>
+                         <h3>Tasty Dishes</h3>
+                         <h4>Rs.100</h4>
+                       </div>
+                  </div>
+                  <div class="box">
+                     <div id="image">
+                        <img src="./spiceimg/mirchi.avif" alt="cinamon">
+                     </div>
+                       <div>
+                         <h3>Tasty Dishes</h3>
+                         <h4>Rs.100</h4>
+                       </div>
+                  </div>
+
+                     </div>
+             <!-- new menu -->
+             <div id="menu_col">
+              <h2>Masala falvours</h2>
+                <div class="box">
+                   <div id="image">
+                      <img src="./spiceimg/star.jpg" alt="cinamon">
+                   </div>
+                     <div>
+                       <h3>Tasty Dishes</h3>
+                       <h4>Rs.100</h4>
+                     </div>
+                </div>
+                <div class="box">
+                   <div id="image">
+                      <img src="./spiceimg/haldi.avif" alt="cinamon">
+                   </div>
+                     <div>
+                       <h3>Tasty Dishes</h3>
+                       <h4>Rs.100</h4>
+                     </div>
+                </div>
+                <div class="box">
+                   <div id="image">
+                      <img src="./spiceimg/jira1.avif" alt="cinamon">
+                   </div>
+                     <div>
+                       <h3>Tasty Dishes</h3>
+                       <h4>Rs.100</h4>
+                     </div>
+                </div>
+              </div>
+           <!-- latest new menu -->
+           <div id="menu_col">
+            <h2>Masala falvours with chef</h2>
+              <div class="box">
+                 <div id="image">
+                    <img src="./spiceimg/mirchi.avif" alt="cinamon">
+                 </div>
+                   <div>
+                     <h3>Tasty Dishes</h3>
+                     <h4>Rs.100</h4>
+                   </div>
+              </div>
+              <div class="box">
+                 <div id="image">
+                    <img src="./spiceimg/spices1.avif" alt="cinamon">
+                 </div>
+                   <div>
+                     <h3>Tasty Dishes</h3>
+                     <h4>Rs.100</h4>
+                   </div>
+              </div>
+              <div class="box">
+                 <div id="image">
+                    <img src="./spiceimg/mirchi.avif" alt="cinamon">
+                 </div>
+                   <div>
+                     <h3>Tasty Dishes</h3>
+                     <h4>Rs.100</h4>
+                   </div>
+              </div>
+                </div>
+           </div>
+        </div>
+    <!-- ----Menu section----- -->
+
+    <!-- chef sction -->
+      <div id="chef">
+         <h1 id="section">Chef</h1>
+          <div id="chef_row">
+             <div class="chef_col">
+                <div>
+                  <img src="./spiceimg/chef1-removebg-preview.png" alt="">
+                </div>
+                  <div>
+                     <h4>Hillary</h4>
+                  </div>
+             </div>
+             <div class="chef_col">
+                <div>
+                  <img src="./spiceimg/chef2-removebg-preview.png" alt="">
+                </div>
+                  <div>
+                     <h4>shriya</h4>
+                  </div>
+             </div>
+             <div class="chef_col">
+                <div>
+                  <img src="./spiceimg/chef10-removebg-preview.png" alt="" style="height: 320px; width: 280px;">
+                </div>
+                  <div>
+                     <h4>chef</h4>
+                  </div>
+             </div>
+             <div class="chef_col">
+                <div>
+                  <img src="./spiceimg/chef9-removebg-preview.png" alt="" style="height: 350px; width: 280px;">
+                </div>
+                  <div>
+                     <h4>risha</h4>
+                  </div>
+             </div>
+          </div>
+      </div>
+    <!-- chef sction -->
+     
+    <!------------------------------------- About section ------------------------->
+       <div id="about">
+         <h1 id="section">About</h1>
+           <div id="about_row">
+               <div class="about_col">
+                  <h1> About Us</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dolor impedit a ipsum veritatis! Veritatis velit deleniti magnam voluptate voluptatum architecto ratione minima sequi rerum repellendus. Obcaecati accusantium maxime explicabo.
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed delectus architecto quibusdam recusandae incidunt maxime quod cum, cumque magni? Magni illum delectus ea odit exercitationem nemo impedit tempore consequatur beatae?
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum deleniti nobis, reprehenderit cupiditate error commodi quibusdam eveniet nisi dicta adipisci laborum corrupti, similique magnam ad facilis sit odit dolores doloremque.
+                    </p>
+               </div>
+
+             <div class="about_col">
+                <div id="about_img">
+                  <img src="./spiceimg/aboutback1-removebg-preview (2).png" alt="" style="height: 400px; width: 400px;">
+                </div>
+             </div>
+
+           </div>
+       </div>
+    <!------------------------------------- About section ------------------------->
+
+    <!-- ----------------------contact section --------------------------------------------------------- -->
+     <div id="contact">
+      <h1 id="section">Contact</h1>
+        <div id="contact_row">
+           <div class="contact_col">
+             <div>
+                 <p>
+                     <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      Chatrapati Sambhajinagar , Maharashtra
+                 </p>
+                 <p>
+                   <a href="mailto: Abc@gmail.com"></a>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                     Abc@gmail.com
+                 </p>
+                 <p>
+                   <a href="tel:+5487643549896"></a>
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  +5487643549896
+                 </p>
+                 <h3>Follow Us</h3>
+                 <p id="social">
+                    <a href=""> <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    <a href=""> <i class="fa fa-youtube-square" aria-hidden="true"></i>
+                    <a href=""> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href=""> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                 </p>
+             </div>
+           </div>
+
+                  <div class="contact_col">
+                      <form action="">
+                        <h2>Get in touch</h2>
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email">
+                        <input type="text" placeholder="subject">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Type message"></textarea>
+                         <button>Send Message</button>
+                      </form>
+                  </div>
+
+        </div>
+
+     </div>
+    <!-- ----------------------contact section --------------------------------------------------------- -->
+
+    <!---------------------------- footer section -------------------------------------------------------- -->
+      
+       <div id="footer">
+         <div>
+            <h5>Copyright & copy:2023|<a href="">Shrutipatil</a></h5>
+         </div>
+         <div id="top">
+             <a href="#hero"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
+         </div>
+       </div>
+
+    <!---------------------------- footer section -------------------------------------------------------- -->
+</body>
+</html>
